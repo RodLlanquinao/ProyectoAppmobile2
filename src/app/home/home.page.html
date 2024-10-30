@@ -1,0 +1,16 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Mapa de Destino</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="map-container" id="map"></div>
+
+  <ion-item>
+    <ion-label position="floating">Dirección de destino</ion-label>
+    <ion-input #destinationInput [(ngModel)]="destinationAddress" placeholder="Ingresa la dirección" (ionFocus)="initAutocomplete()"></ion-input>
+  </ion-item>
+
+  <ion-button expand="block" (click)="setDestinationMarker()">Marcar Destino</ion-button>
+</ion-content>
